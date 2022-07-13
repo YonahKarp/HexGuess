@@ -1,0 +1,74 @@
+.hexquiz{
+    color: whitesmoke;
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .quizContainer{
+        text-align: center;
+
+        .inputHolder{
+            position: relative;
+        }
+
+        h1{text-shadow: 2px 2px 2px #2228;}
+
+        input{
+            padding: 10px 15px;
+            border-radius: 10px;
+            border: #222;
+            text-indent: 15px;
+            font-family: 'Courier New', Courier, monospace;
+
+
+            &:focus{outline: none;}
+            &::placeholder{ color: lightgray; }
+        }
+
+        .hash{
+            position: absolute;
+            left: 20px;
+            top: 9px;
+            color: #222;
+        }
+
+    }
+}
+
+
+.btn{
+    position: relative;
+}
+.hoverMsg{
+    display: none;
+    position: absolute;
+    background-color: #222;
+    box-shadow: 0px 5px 5px #fff8;
+    width: 100%;
+
+    bottom: -50px;
+    left: 0;
+
+
+    padding: 10px;
+    border-radius: 10px;
+
+    &::before{
+        content: '';
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #222;
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .disabled:hover &{
+        display: block;
+    }
+}
+
